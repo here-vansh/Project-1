@@ -1,31 +1,87 @@
-*{
+* {
     box-sizing: border-box;
-}
-
-
-
-
-body{
+  }
+  
+  body {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    display: flex;
     margin: 0;
     align-items: center;
     justify-content: center;
-    overflow: hidden;
-    height: 100vh;
-}
-.bg-image{
-    background: url(https://png.pngtree.com/background/20230427/original/pngtree-abstract-blue-and-navy-background-with-modern-style-vector-picture-image_2496941.jpg) no-repeat center center/cover;
-   position: absolute;
-   height:100vh;
-   width: 100vw;
-   top: 0;
-   left: 0;
-   filter: blur(0px);
-    z-index: -1;}
-
-.loading-text{
+    overflow: auto;
+  }
+  
+  .bg-image {
+    background: linear-gradient(#8BC6EC, #9599E2, #a666d4) no-repeat center center/cover;
+    position: absolute;
+    width: 100vw;
+    filter: blur(0px);
+    z-index: -1;
+  }
+  
+  .loading-text {
     color: white;
-    font-size:30px ;
+    font-size: 30px;
     font-weight: 550;
-}
+    justify-content: center;
+    text-align: center;
+    top: 50vh;
+    position: absolute;
+    left: 50vw;
+  }
+  
+  .hero-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  .name {
+    font-weight: bold;
+  }
+  
+  .cursor {
+    font-weight:lighter;
+    animation: blink 0.7s infinite;
+  }
+  
+  @keyframes blink {
+    50% {
+      opacity: 0;
+    }
+  }
+  
+  .type-text {
+    font-size: 2rem;
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    /* white-space: nowrap; */
+    overflow: hidden;
+    /* margin-left: 10vw; */
+    border-right: 2px solid black;
+    /* animation: typing 3s steps(20) forwards, blink 0.5s infinite; */
+  }
+  
+  @keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+  }
+  
+  .innerSection {
+    margin-top: 50px;
+    margin-left: 6vw;
+    border: 3px solid rgb(255, 255, 255);
+    border-radius: 45px;
+    padding: 20px;
+    width: 70vw;
+    box-shadow: -2px -2px 2px 2px #7f7f7f inset, 2px 2px 2px 2px #7f7f7f inset;
+    background-color: antiquewhite;
+    font-size: medium;
+  }
+
+  .name-container {
+    display: inline-block;
+  }
